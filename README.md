@@ -28,26 +28,6 @@ This data warehousing solution is designed to:
 
 ---
 
-## 📂 Folder Structure
-
-```bash
-stock-market-data-warehouse/
-├── report/                  # Final project write-up
-│   └── DW_final_draft_1.pdf
-├── sql/                     # SQL queries for data cubes and OLAP
-│   ├── cube_queries.sql
-│   ├── aggregation_examples.sql
-│   └── olap_operations.sql
-├── python/                  # Visualizations and analytics
-│   ├── stock_trends_by_year.py
-│   ├── correlation_matrix.py
-│   ├── daily_volume_area_chart.py
-│   ├── stock_distribution_pie.py
-│   └── market_cap_treemap.py
-```
-
----
-
 ## 📈 Visualizations
 
 - Line plot: Stock close trends by year  
@@ -70,7 +50,7 @@ stock-market-data-warehouse/
 
 ## 📥 Report
 
-🔗 [Final Project Report (PDF)](report/DW_final_draft_1.pdf)
+🔗 [Final Project Report (PDF)](report/Report.pdf)
 
 ---
 
