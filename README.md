@@ -1,70 +1,64 @@
-# 📊 Bank Marketing Campaign Prediction Dashboard
+# 📊 Stock Market Data Warehouse
 
-This Project predicts customer subscription to term deposits using a Portuguese bank's marketing data.  
-It includes Python machine learning, SHAP explainability, and a Power BI dashboard.
-
-This project combines **machine learning** and **business intelligence** to predict whether customers will subscribe to a term deposit based on direct marketing campaign data from a Portuguese bank. 
-
-It leverages **Python modeling** and a **Power BI dashboard** to deliver clear, actionable business insights.
+- This project implements a dimensional data warehouse model for analyzing historical stock market performance. It uses SQL-based OLAP queries, data cubes, and visualizations to deliver business intelligence insights to analysts and investors.
 
 ---
 
-## 🚀 Project Objectives
+## 🚀 Project Summary
 
-- Predict term deposit subscription likelihood using historical campaign data.
-- Handle data imbalance using SMOTE to improve model performance.
-- Train and evaluate Logistic Regression, Random Forest, and XGBoost models.
-- Explain model behavior using SHAP values.
-- Visualize results with an interactive Power BI dashboard.
+
+This data warehousing solution is designed to:
+- Consolidate and structure daily stock performance data.
+- Enable OLAP operations such as drill-down, roll-up, slice & dice.
+- Support visualizations for stock metrics, volumes, and trends.
+- Deliver actionable insights for forecasting and financial decision-making.
 
 ---
 
-## 🧱 Dataset Overview
+## 🧱 Data Model
 
-**Source**: UCI Machine Learning Repository  
-- Size: ~41,000 records  
-- Target Variable: `y` (1 = subscribed, 0 = not subscribed)  
+- **Fact Table**  
+- `fact_stock_data`: Includes stock prices (open, close, high, low), adjusted close, volume, etc
 
-### `Key Features:`
-- `Demographics`: age, job, education, marital status  
-- `Campaign interaction`: contact month, number of contacts, call duration  
-- `Economic context`: employment rate, consumer index  
+- **Dimension Tables** 
 
-### **Dimension Tables**  
 - `dim_time`: Time attributes (date, month, year)  
 - `dim_stock`: Stock tickers and company mapping  
 - `dim_company`: Company names and ticker info  
-- `dim_index`: Market index info and volumes  
+- `dim_index`: Market index info and volumes
 
 ---
 
-## 🧠 Tech Used
+- ## 📈 Visualizations
 
-- `Language`: Python (Google Colab)  
-- `ML Libraries`: pandas, scikit-learn, XGBoost, SHAP, imblearn  
-- `BI Tool`: Microsoft Power BI  
-- `Other Tools`: Matplotlib, Seaborn, SMOTE, Joblib  
+- Line plot: Stock close trends by year  
+- Heatmap: Correlation matrix of stock variables  
+- Area chart: Daily performance by day in month  
+- Pie chart: Stock distribution by company  
+- Treemap: Market capitalization by company 
+
+---
+
+
+## 🧠 Techniques Used
+
+- Dimensional Modeling (Kimball Style)  
+- SQL (PostgreSQL/Oracle)  
+- OLAP (Slice, Dice, Drill-down, Roll-up)  
+- Python (Matplotlib, Seaborn, Plotly)  
+- Tableau for interactive dashboards 
+
 
 ---
 
 ## 📥 Report
 
-### 🧠 Modeling Approach
-
-- **Preprocessing**: Removed `unknown`, one-hot encoded categoricals  
-- **Feature Engineering**: Added `subscription_probability`, `score_bin`  
-- **Model Training**:
-  - Logistic Regression  
-  - Random Forest  
-  - XGBoost ✅ Best performance  
-- **Explainability**: SHAP beeswarm plot  
-
 🔗 [Final Project Report (PDF)](report/Report.pdf)
 
 ---
 
-## 📸 Report Summary Preview
+## 📚 References
 
-<p align="center">
-  <img src="report.png" alt="Final Report Preview" width="800"/>
-</p>
+
+- [Kimball Dimensional Modeling Techniques](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/)
+- [Vertabelo Data Modeling Guide](https://www.vertabelo.com/blog/a-beginners-guide-to-data-modeling/)
