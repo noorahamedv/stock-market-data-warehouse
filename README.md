@@ -1,64 +1,84 @@
 # 📊 Stock Market Data Warehouse
 
-- This project implements a dimensional data warehouse model for analyzing historical stock market performance. It uses SQL-based OLAP queries, data cubes, and visualizations to deliver business intelligence insights to analysts and investors.
+> A dimensional modeling project for analyzing daily stock market performance using OLAP and interactive dashboards.
 
 ---
 
-## 🚀 Project Summary
+## 🚀 Overview
 
-
-This data warehousing solution is designed to:
-- Consolidate and structure daily stock performance data.
-- Enable OLAP operations such as drill-down, roll-up, slice & dice.
-- Support visualizations for stock metrics, volumes, and trends.
-- Deliver actionable insights for forecasting and financial decision-making.
+This project implements a **data warehouse** to consolidate and analyze historical **stock market performance**. Designed for analysts, data scientists, and investors, the system enables multidimensional insights through SQL-based OLAP operations and data visualization.
 
 ---
 
-## 🧱 Data Model
+## 🎯 Objectives
 
-- **Fact Table**  
-- `fact_stock_data`: Includes stock prices (open, close, high, low), adjusted close, volume, etc
-
-- **Dimension Tables** 
-
-- `dim_time`: Time attributes (date, month, year)  
-- `dim_stock`: Stock tickers and company mapping  
-- `dim_company`: Company names and ticker info  
-- `dim_index`: Market index info and volumes
+- ✅ Model daily stock data using dimensional techniques  
+- ✅ Perform OLAP operations: **drill-down**, **roll-up**, **slice & dice**  
+- ✅ Generate actionable insights for **trend analysis** & **forecasting**  
+- ✅ Support visualizations for volumes, metrics, and company-wise analysis
 
 ---
 
-- ## 📈 Visualizations
+## 🧱 Data Warehouse Schema
 
-- Line plot: Stock close trends by year  
-- Heatmap: Correlation matrix of stock variables  
-- Area chart: Daily performance by day in month  
-- Pie chart: Stock distribution by company  
-- Treemap: Market capitalization by company 
+### 🧮 Fact Table
+
+- **`fact_stock_data`**  
+  Stores daily stock metrics:
+  - Open, Close, High, Low
+  - Adjusted Close
+  - Trading Volume
+
+### 🧾 Dimension Tables
+
+- **`dim_time`**  
+  Stores date, day, month, quarter, year
+
+- **`dim_stock`**  
+  Stores ticker symbol, ISIN, and exchange
+
+- **`dim_company`**  
+  Contains company name, sector, and region
+
+- **`dim_index`**  
+  Market index name, classification, volume type
 
 ---
 
+## 📊 Visualizations
 
-## 🧠 Techniques Used
+Interactive dashboards and plots reveal patterns and insights:
 
-- Dimensional Modeling (Kimball Style)  
-- SQL (PostgreSQL/Oracle)  
-- OLAP (Slice, Dice, Drill-down, Roll-up)  
-- Python (Matplotlib, Seaborn, Plotly)  
-- Tableau for interactive dashboards 
-
+- 📈 **Line Plot** – Closing price trends over time  
+- 🧊 **Heatmap** – Correlation between stock metrics  
+- 📅 **Area Chart** – Daily performance in a calendar view  
+- 🧩 **Treemap** – Market capitalization by company  
+- 🥧 **Pie Chart** – Distribution of tickers by sector or region
 
 ---
 
-## 📥 Report
+## 🧠 Techniques & Tools
 
-🔗 [Final Project Report (PDF)](report/Report.pdf)
+- 🧰 Dimensional Modeling (Kimball Style)  
+- 🗄️ SQL (PostgreSQL / Oracle)  
+- 🧪 OLAP operations (Slice, Dice, Drill-down, Roll-up)  
+- 🐍 Python (Pandas, Matplotlib, Seaborn, Plotly)  
+- 📊 Tableau for interactive dashboards & storytelling
+
+---
+
+## 📥 Deliverables
+
+📄 **[Final Report (PDF)](report/Report.pdf)**  
+📦 ERD Diagram, SQL Scripts, Visualizations
 
 ---
 
 ## 📚 References
 
+- 📘 [Kimball Dimensional Modeling Techniques](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/)  
+- 📘 [Vertabelo Data Modeling Guide](https://www.vertabelo.com/blog/a-beginners-guide-to-data-modeling/)
 
-- [Kimball Dimensional Modeling Techniques](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/)
-- [Vertabelo Data Modeling Guide](https://www.vertabelo.com/blog/a-beginners-guide-to-data-modeling/)
+---
+
+
